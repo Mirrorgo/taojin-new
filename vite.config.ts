@@ -3,7 +3,12 @@ import { resolve } from "path";
 import react from "@vitejs/plugin-react";
 import copy from "rollup-plugin-copy";
 import vitePluginImp from "vite-plugin-imp";
+import * as fs from "fs";
+import lessToJS from "less-vars-to-js";
 
+const themeVariables = lessToJS(
+  fs.readFileSync(resolve(__dirname, "./src_global/variables.less"), "utf8")
+);
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -18,9 +23,7 @@ export default defineConfig({
       libList: [
         {
           libName: "antd",
-          style(name) {
-            return `antd/es/${name}/style/css.js`;
-          },
+          style: (name) => `antd/lib/${name}/style/index.less`,
         },
       ],
     }),
@@ -32,6 +35,16 @@ export default defineConfig({
       hook: "writeBundle",
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      less: {
+        // 支持内联 JavaScript
+        javascriptEnabled: true,
+        // 重写 less 变量，定制样式
+        modifyVars: themeVariables,
+      },
+    },
+  },
   build: {
     rollupOptions: {
       input: {
