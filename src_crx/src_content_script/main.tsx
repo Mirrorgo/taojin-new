@@ -6,5 +6,5 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("content-script-root")
+  document.getElementById("taojin-crx-root")
 );
