@@ -1,10 +1,10 @@
 import "./App.less";
-import TestAlias from "base/TestAlias";
+import { Button } from "antd";
 function App() {
   return (
     <div>
       options
-      <TestAlias></TestAlias>
+      <Button>按钮</Button>
     </div>
   );
 }

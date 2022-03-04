@@ -1,3 +1,4 @@
+import { Button } from "antd";
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,10 @@ function App() {
           </a>
         </li>
       </ul>
+      <br />
+      <h1>组件测试区</h1>
+      <Button>按钮</Button>
+      <h2>Wow</h2>
     </div>
   );
 }

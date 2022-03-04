@@ -1,5 +1,10 @@
 function App() {
-  return <div>popup</div>;
+  return (
+    <div>
+      popup
+      <h1>wow</h1>
+    </div>
+  );
 }
 
 export default App;

@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import react from "@vitejs/plugin-react";
 import copy from "rollup-plugin-copy";
+import vitePluginImp from "vite-plugin-imp";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,6 +14,16 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    vitePluginImp({
+      libList: [
+        {
+          libName: "antd",
+          style(name) {
+            return `antd/es/${name}/style/css.js`;
+          },
+        },
+      ],
+    }),
     copy({
       targets: [
         { src: "manifest.json", dest: "dist" },
