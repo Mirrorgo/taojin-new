@@ -1,4 +1,6 @@
+import Login from "@/src_crx/src_options/pages/Login";
 import { Button } from "antd";
+import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
@@ -20,7 +22,11 @@ function App() {
       <br />
       <h1>组件测试区</h1>
       <Button>按钮</Button>
-      <h2>Wow</h2>
+      <br />
+      <h1>路由测试区</h1>
+      <Routes>
+        <Route path="/login" element={<Login />}></Route>
+      </Routes>
     </div>
   );
 }

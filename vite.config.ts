@@ -20,6 +20,7 @@ export default defineConfig({
       basic: resolve(__dirname, "./src_global/components/basic"),
       config: resolve(__dirname, "./src_global/config"),
       global: resolve(__dirname, "./src_global"),
+      "@": resolve(__dirname, "."),
     },
   },
   plugins: [

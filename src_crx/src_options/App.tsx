@@ -1,12 +1,7 @@
-import "./App.less";
-import { Button } from "antd";
+import { Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
 function App() {
-  return (
-    <div>
-      options
-      <Button>按钮</Button>
-    </div>
-  );
+  return <>wow</>;
 }
 
 export default App;

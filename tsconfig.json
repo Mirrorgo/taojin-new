@@ -21,7 +21,8 @@
       "base/*": ["./src_global/components/base/*"],
       "basic/*": ["./src_global/components/basic/*"],
       "config/*": ["./src_global/config/*"],
-      "global/*": ["./src_global/*"]
+      "global/*": ["./src_global/*"],
+      "@/*": ["./*"]
     }
   },
   "include": ["src", "src_crx", "src_global"],
