@@ -1,3 +1,7 @@
+[项目文档](https://www.yuque.com/lalala-wm82o/qvhwgq/rdyhpi)
+
+问题:多页应用+chrome内以.html结尾的文件导致react-router-dom无法正常使用
+解决方案:暂无
 TODO:
 * 数据结构二次重构,使用redux(真的很乱)
 * 继续熟悉chrome的api,熟悉各插件部分间的通信
