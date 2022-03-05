@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --mode development",
-    "watch": "tsc && vite build --watch --mode beta",
+    "dev-beta": "vite --mode beta",
+    "watch": "tsc && vite build --watch --mode release",
     "build": "tsc && vite build --mode release",
     "preview": "vite preview"
   },
