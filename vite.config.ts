@@ -7,7 +7,10 @@ import * as fs from "fs";
 import lessToJS from "less-vars-to-js";
 
 const themeVariables = lessToJS(
-  fs.readFileSync(resolve(__dirname, "./src_global/variables.less"), "utf8")
+  fs.readFileSync(
+    resolve(__dirname, "./src_global/config/variables.less"),
+    "utf8"
+  )
 );
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +18,8 @@ export default defineConfig({
     alias: {
       base: resolve(__dirname, "./src_global/components/base"),
       basic: resolve(__dirname, "./src_global/components/basic"),
+      config: resolve(__dirname, "./src_global/config"),
+      global: resolve(__dirname, "./src_global"),
     },
   },
   plugins: [
@@ -64,3 +69,5 @@ export default defineConfig({
     },
   },
 });
+
+console.dir(process.argv);
