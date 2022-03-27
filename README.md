@@ -9,3 +9,4 @@ TODO:
 * 多collection同时打开,支持相互拖拽
 * 支持item直接拖入集锦组
 * 社区分享集锦组
+* 添加note部分的pwa版本以及改造脚手架为monorepo

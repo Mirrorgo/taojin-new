@@ -1,31 +1,19 @@
-import { useEffect } from "react";
-import {
-  Link,
-  Route,
-  Routes,
-  useNavigate,
-  useSearchParams,
-} from "react-router-dom";
-import About from "./pages/About";
-import Login from "./pages/Login";
 function App() {
+  const handleClick = () => {
+    // chrome.notifications.create(null, {
+    //   iconUrl: "",
+    //   type: "basic",
+    //   title: "标题",
+    //   message: "测试消息",
+    // });
+    console.log("owo");
+  };
   return (
     <div>
       wpw
-      <Link to="/about">go about</Link>
-      <Routes>
-        <Route path="/" element={<Login />}></Route>
-        <Route path="/about" element={<About />}></Route>
-      </Routes>
+      <button onClick={handleClick}>试试按钮</button>
     </div>
   );
-}
-function Redirect({ to }) {
-  let navigate = useNavigate();
-  useEffect(() => {
-    navigate(to);
-  });
-  return null;
 }
 
 export default App;
