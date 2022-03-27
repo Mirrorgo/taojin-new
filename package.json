@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --mode development",
+    "dev": "vite --mode development --port 1233",
     "dev-beta": "vite --mode beta",
     "watch": "tsc && vite build --watch --mode release",
     "build": "tsc && vite build --mode release",
