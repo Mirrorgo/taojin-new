@@ -7,10 +7,10 @@ function App() {
       <h1>一个导航页,开发专用</h1>
       <ul>
         <li>
-          <a href="/src_crx/src_popup/">popup</a>
+          <a href="/popup.html">popup</a>
         </li>
         <li>
-          <a href="/src_crx/src_options/">options</a>
+          <a href="/options.html">options</a>
         </li>
         <hr />
         <li>
